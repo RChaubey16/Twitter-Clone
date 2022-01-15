@@ -1,6 +1,5 @@
 import React from "react";
 import "./Widgets.css";
-
 import SearchIcon from "@mui/icons-material/Search";
 import { Timeline, Tweet } from "react-twitter-widgets";
 

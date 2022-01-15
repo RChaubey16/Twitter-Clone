@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
 import FlipMove from "react-flip-move";
 import "./Feed.css";
-
 import Post from "./Post";
 import TweetBox from "./TweetBox";
-
 import db from "./firebase";
 
 function Feed() {
