@@ -44,3 +44,16 @@
 .post__avatar{
     padding: 20px;
 }
+
+.post__imageContainer{
+    width: 100%;
+    max-width: 390px;
+   
+}
+
+.post__imageContainer >  img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    border-radius: 20px;
+}

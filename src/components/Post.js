@@ -20,8 +20,8 @@ function Post({ displayName, username, verified, text, image, avatar }) {
             <h3>
               {displayName}{" "}
               <span className="post__headerSpecial">
-                {verified && <VerifiedIcon className="post__badge" />}
-                @{username}
+                {verified && <VerifiedIcon className="post__badge" />}@
+                {username}
               </span>
             </h3>
           </div>
@@ -30,7 +30,9 @@ function Post({ displayName, username, verified, text, image, avatar }) {
             <p>{text}</p>
           </div>
         </div>
-        <img src={image} alt="profile" />
+        <div className="post__imageContainer">
+          <img src={image} />
+        </div>
         <div className="post__footer">
           {/* fontSize is built into material-ui */}
           <ChatBubbleOutlineIcon fontSize="small" />
