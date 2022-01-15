@@ -3,6 +3,7 @@ import "./Sidebar.css";
 
 import SidebarOption from './SidebarOption';
 
+// Material UI Icon
 import TwitterIcon from '@mui/icons-material/Twitter';
 import HomeIcon from '@mui/icons-material/Home';         
 import SearchIcon from '@mui/icons-material/Search';
@@ -13,6 +14,8 @@ import ListAltIcon from '@mui/icons-material/ListAlt';
 import PermIdentityIcon from '@mui/icons-material/PermIdentity';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 
+import { Button } from "@material-ui/core";
+
 
 function Sidebar() {
     return (
@@ -21,7 +24,7 @@ function Sidebar() {
             <TwitterIcon />
 
             {/* Sidebar option component */}
-            <SidebarOption Icon={HomeIcon} text="Home" />
+            <SidebarOption active Icon={HomeIcon} text="Home" />
             <SidebarOption Icon={SearchIcon} text="Explore" />
             <SidebarOption Icon={NotificationsNoneIcon} text="Notifications" />
             <SidebarOption Icon={MailOutlineIcon} text="Messages" />
@@ -32,6 +35,8 @@ function Sidebar() {
             
 
             {/* Button -> Tweet */}
+            <Button variant="outlined" className="sidebar__tweet" fullWidth>Tweet</Button>
+            {/* variant, fullWidth are material-ui attributes for button */}
 
         </div>
     )
