@@ -11,20 +11,27 @@ function TweetBox() {
   const sendTweetHandler = (e) => {
     e.preventDefault();
 
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, "0");
+    var mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
+    var yyyy = today.getFullYear();
+
+    today = mm + '/' + dd + '/' + yyyy;
+
     // inserting data in firestore
-    db.collection('posts').add({
+    db.collection("postCollection").add({
       displayName: "Ruturaj Chaubey",
       username: "raj.chaubey_",
       verified: true,
       text: tweetMessage,
       image: tweetImage,
       avatar: "https://i1.sndcdn.com/avatars-000340104944-w8pip0-t500x500.jpg",
-
+      timestamp: Date.now()
     });
-    
+
     setTweetMessage("");
     setTweetImage("");
-  }
+  };
 
   return (
     <div className="tweetBox">
@@ -45,7 +52,11 @@ function TweetBox() {
           type="text"
           placeholder="Optional: Enter Image URL"
         />
-        <Button onClick={sendTweetHandler} type="submit" className="tweetBox__tweetButton">
+        <Button
+          onClick={sendTweetHandler}
+          type="submit"
+          className="tweetBox__tweetButton"
+        >
           Tweet
         </Button>
       </form>
