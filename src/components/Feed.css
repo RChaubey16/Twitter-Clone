@@ -1,0 +1,32 @@
+.feed{
+    flex: 0.4;
+    border-right: 1px solid var(--twitter-background);
+     /* this min-wdith says, whatever content it has it must fit the content. Content can be image, post or anything inside the feed container */
+     min-width: fit-content;
+     overflow-y: scroll;
+}
+
+/* Hide scrollbar from chrome, safari and opera */
+.feed::-webkit-scrollbar{
+    display: none;
+}
+
+/* Hide for IE, Edge and firefox */
+.feed{
+    -ms-overflow-style: none; /* IE, edge */
+    scrollbar-width: none; /* firfox */
+}
+
+.feed__header{
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 100;
+    border: 1px solid var(--twitter-background);
+    padding: 15px 20px;
+}
+
+.feed__header > h2{
+    font-size: 20px;
+    font-weight: 800;
+}

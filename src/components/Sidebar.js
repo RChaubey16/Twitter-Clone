@@ -20,7 +20,7 @@ import { Button } from "@material-ui/core";
 function Sidebar() {
     return (
         <div className="sidebar">                                                                                                   
-            {/* Twiiter icon */}                                                                                                    
+            {/* Twiiter icon */}
             <TwitterIcon className="sidebar__twitterIcon" />
 
             {/* Sidebar option component */}
