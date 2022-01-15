@@ -42,6 +42,7 @@ function TweetBox() {
             value={tweetMessage}
             type="text"
             placeholder="What's happening?"
+            required
           />
         </div>
         <input

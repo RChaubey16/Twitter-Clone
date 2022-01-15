@@ -1,5 +1,5 @@
 .feed{
-    flex: 0.4;
+    flex: 0.45;
     border-right: 1px solid var(--twitter-background);
      /* this min-wdith says, whatever content it has it must fit the content. Content can be image, post or anything inside the feed container */
      /* min-width: fit-content; */
