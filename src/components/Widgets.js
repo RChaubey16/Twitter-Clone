@@ -13,7 +13,7 @@ function Widgets() {
 
       <div className="widgets__widgetContainer">
         <h2>What's happening?</h2>
-        <Tweet tweetId="841418541026877441" />
+        <Tweet tweetId="1502585334793932801" />
 
         <Timeline
           dataSource={{

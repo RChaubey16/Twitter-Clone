@@ -1,5 +1,7 @@
 .feed{
+    min-height: 1050px;
     flex: 0.45;
+    border-left: 1px solid var(--twitter-background);
     border-right: 1px solid var(--twitter-background);
      /* this min-wdith says, whatever content it has it must fit the content. Content can be image, post or anything inside the feed container */
      /* min-width: fit-content; */
@@ -29,4 +31,17 @@
 .feed__header > h2{
     font-size: 20px;
     font-weight: 800;
+}
+
+@media only screen and (max-width: 768px){
+    .feed{
+        flex: 0.7;
+    }
+}
+
+@media only screen and (max-width: 425px){
+    .feed{
+        flex: 1;
+        overflow-x: hidden;
+    }
 }

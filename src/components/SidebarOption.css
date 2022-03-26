@@ -25,3 +25,13 @@
 .sidebarOption--active{
     color: var(--twitter-color);
 }
+
+@media only screen and (max-width: 768px){
+    .sidebarOption h2{
+        display: none;
+    }   
+
+    .sidebarOption{
+        display: flex;
+    }
+}

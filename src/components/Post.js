@@ -30,9 +30,14 @@ const Post = forwardRef(
               <p>{text}</p>
             </div>
           </div>
-          <div className="post__imageContainer">
+          {image != null && (
+            <div className="post__imageContainer">
+              <img src={image} />
+            </div>
+          )}
+          {/* <div className="post__imageContainer">
             <img src={image} />
-          </div>
+          </div> */}
           <div className="post__footer">
             {/* fontSize is built into material-ui */}
             <ChatBubbleOutlineIcon fontSize="small" />

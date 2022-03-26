@@ -6,6 +6,7 @@ import db from "./firebase";
 function TweetBox() {
   const [tweetMessage, setTweetMessage] = useState("");
   const [tweetImage, setTweetImage] = useState("");
+  const [fillDetails, setFillDetails] = useState(false);
 
   const sendTweetHandler = (e) => {
     e.preventDefault();
@@ -16,6 +17,12 @@ function TweetBox() {
     var yyyy = today.getFullYear();
 
     today = mm + '/' + dd + '/' + yyyy;
+
+    if (tweetMessage.length == 0){
+      alert("Please fill the details");
+      setFillDetails(true);
+      return;
+    }
 
     // inserting data in firestore
     db.collection("postCollection").add({
@@ -30,6 +37,7 @@ function TweetBox() {
 
     setTweetMessage("");
     setTweetImage("");
+    setFillDetails(false);
   };
 
   return (
@@ -38,6 +46,7 @@ function TweetBox() {
         <div className="tweetBox__input">
           <Avatar src="https://i1.sndcdn.com/avatars-000340104944-w8pip0-t500x500.jpg"></Avatar>
           <input
+            class = {fillDetails && 'fill-details-active'}
             onChange={(e) => setTweetMessage(e.target.value)}
             value={tweetMessage}
             type="text"

@@ -41,3 +41,14 @@
     /* margin-right: auto !important; */
 }
 
+.fill-details-active{
+    border: 4px solid red;
+    border-radius: 5px;
+    background-color: lightpink;
+}
+
+@media only screen and (max-width: 425px){
+    .tweetBox__input > input{
+        width: 100%;
+    }
+}

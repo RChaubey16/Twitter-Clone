@@ -40,7 +40,7 @@ function Feed() {
             verified={post.verified}
             text={post.text}
             avatar={post.avatar}
-            image={post.image}
+            image={post.image.length > 0 ? post.image : null}
           />
         ))}
       </FlipMove>
