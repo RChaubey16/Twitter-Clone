@@ -22,7 +22,7 @@ function Sidebar() {
             <TwitterIcon className="sidebar__twitterIcon" />
 
             {/* Sidebar option component */}
-            <SidebarOption active Icon={HomeIcon} text="Home" />
+            <SidebarOption active Icon={HomeIcon} text="Test" />
             <SidebarOption Icon={SearchIcon} text="Explore" />
             <SidebarOption Icon={NotificationsNoneIcon} text="Notifications" />
             <SidebarOption Icon={MailOutlineIcon} text="Messages" />
